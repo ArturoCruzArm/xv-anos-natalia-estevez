@@ -158,6 +158,10 @@ body {
     opacity: 0;
     transform: scale(0.9);
     animation: fadeInScale 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes fadeInScale {
@@ -736,6 +740,7 @@ section {
     opacity: 0;
     transform: translateY(-30px) rotateX(90deg);
     animation: letterFadeIn 0.8s ease-out forwards;
+    white-space: nowrap;
 }
 
 @keyframes letterFadeIn {
@@ -750,4 +755,18 @@ section {
         opacity: 1;
         transform: translateY(0) rotateX(0) scale(1);
     }
+}
+
+.main-title {
+    width: 100%;
+    text-align: center;
+}
+
+.subtitle {
+    width: 100%;
+    text-align: center;
+}
+
+.date {
+    width: auto;
 }
