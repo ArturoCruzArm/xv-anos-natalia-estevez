@@ -1,3 +1,87 @@
+// Particles.js Configuration
+if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: ['#d4af37', '#8b6f47', '#ffffff']
+            },
+            shape: {
+                type: ['circle', 'triangle'],
+                stroke: {
+                    width: 0,
+                    color: '#000000'
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 2,
+                    size_min: 0.1,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: false
+            },
+            move: {
+                enable: true,
+                speed: 1.5,
+                direction: 'top',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: 'bubble'
+                },
+                onclick: {
+                    enable: true,
+                    mode: 'repulse'
+                },
+                resize: true
+            },
+            modes: {
+                bubble: {
+                    distance: 150,
+                    size: 6,
+                    duration: 2,
+                    opacity: 0.8
+                },
+                repulse: {
+                    distance: 100,
+                    duration: 0.4
+                }
+            }
+        },
+        retina_detect: true
+    });
+}
+
 // Countdown Timer
 function updateCountdown() {
     const eventDate = new Date('2025-12-06T14:00:00').getTime();

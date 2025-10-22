@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XV Años de Natalia Estévez Guardián</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - Fuentes mejoradas con más variantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Tangerine:wght@400;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Particles.js para efectos de fondo -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header con nombre de la quinceañera -->
     <header class="hero">
-        <div class="hero-content">
-            <h1 class="main-title">Natalia</h1>
-            <p class="subtitle">Mis XV Años</p>
-            <div class="date">6 de Diciembre, 2025</div>
+        <div id="particles-js"></div>
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="main-title" data-aos="fade-down" data-aos-delay="300">Natalia</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="600">Mis XV Años</p>
+            <div class="date" data-aos="fade-up" data-aos-delay="900">6 de Diciembre, 2025</div>
         </div>
         <div class="scroll-indicator">
             <span>↓</span>
@@ -23,8 +35,8 @@
     <!-- Mensaje de invitación -->
     <section class="invitation-message">
         <div class="container">
-            <h2 class="section-title">Con el favor de Dios y mis padres</h2>
-            <p class="message-text">
+            <h2 class="section-title" data-aos="fade-up">Con el favor de Dios y mis padres</h2>
+            <p class="message-text" data-aos="fade-up" data-aos-delay="200">
                 Tengo el honor de invitarte a celebrar conmigo este momento tan especial.
                 <br><br>
                 Tu presencia será el mejor regalo en este día tan importante para mí.
@@ -35,7 +47,7 @@
     <!-- Información del evento -->
     <section class="event-details">
         <div class="container">
-            <div class="detail-card">
+            <div class="detail-card" data-aos="fade-right" data-aos-duration="800">
                 <div class="icon">⛪</div>
                 <h3>Ceremonia Religiosa</h3>
                 <p class="venue-name">Iglesia de San Nicolás de los Gonzales</p>
@@ -44,7 +56,7 @@
                 <a href="https://maps.app.goo.gl/DKWAXfNoo1KBpFig8" target="_blank" class="map-link">Ver en el mapa</a>
             </div>
 
-            <div class="detail-card">
+            <div class="detail-card" data-aos="fade-left" data-aos-duration="800">
                 <div class="icon">🎉</div>
                 <h3>Recepción</h3>
                 <p class="venue-name">Salón Long Beach</p>
@@ -57,21 +69,21 @@
     <!-- Contador regresivo -->
     <section class="countdown">
         <div class="container">
-            <h2 class="section-title">Faltan</h2>
+            <h2 class="section-title" data-aos="fade-down">Faltan</h2>
             <div class="countdown-timer" id="countdown">
-                <div class="time-unit">
+                <div class="time-unit" data-aos="flip-left" data-aos-delay="100">
                     <span class="number" id="days">00</span>
                     <span class="label">Días</span>
                 </div>
-                <div class="time-unit">
+                <div class="time-unit" data-aos="flip-left" data-aos-delay="200">
                     <span class="number" id="hours">00</span>
                     <span class="label">Horas</span>
                 </div>
-                <div class="time-unit">
+                <div class="time-unit" data-aos="flip-left" data-aos-delay="300">
                     <span class="number" id="minutes">00</span>
                     <span class="label">Minutos</span>
                 </div>
-                <div class="time-unit">
+                <div class="time-unit" data-aos="flip-left" data-aos-delay="400">
                     <span class="number" id="seconds">00</span>
                     <span class="label">Segundos</span>
                 </div>
@@ -82,21 +94,21 @@
     <!-- Código de vestimenta -->
     <section class="dress-code">
         <div class="container">
-            <h2 class="section-title">Código de Vestimenta</h2>
-            <p class="dress-text">Formal / Elegante</p>
-            <p class="dress-note">Por favor no usar color blanco</p>
+            <h2 class="section-title" data-aos="fade-up">Código de Vestimenta</h2>
+            <p class="dress-text" data-aos="zoom-in" data-aos-delay="100">Formal / Elegante</p>
+            <p class="dress-note" data-aos="fade-up" data-aos-delay="200">Por favor no usar color blanco</p>
         </div>
     </section>
 
     <!-- Confirmación de asistencia -->
     <section class="rsvp">
         <div class="container">
-            <h2 class="section-title">Confirma tu Asistencia</h2>
-            <p class="rsvp-text">
+            <h2 class="section-title" data-aos="fade-up">Confirma tu Asistencia</h2>
+            <p class="rsvp-text" data-aos="fade-up" data-aos-delay="100">
                 Agradecería confirmar tu asistencia antes del 25 de Noviembre
             </p>
             <a href="https://wa.me/5214791441617?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Natalia%20Estévez%20Guardián"
-               class="whatsapp-btn" target="_blank">
+               class="whatsapp-btn" target="_blank" data-aos="zoom-in" data-aos-delay="200">
                 <span class="whatsapp-icon">📱</span>
                 Confirmar por WhatsApp
             </a>
@@ -117,6 +129,20 @@
         </div>
     </footer>
 
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
