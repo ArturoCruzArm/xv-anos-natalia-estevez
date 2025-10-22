@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -172,15 +172,15 @@ body {
 }
 
 .main-title {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive;
     font-size: clamp(5rem, 15vw, 14rem);
-    font-weight: 700;
+    font-weight: 400;
     color: #ffffff;
     margin-bottom: 30px;
     text-shadow: 3px 3px 12px rgba(42, 95, 127, 0.6);
     position: relative;
     display: inline-block;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .main-title::before {
@@ -221,18 +221,19 @@ body {
 }
 
 .subtitle {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2.5rem, 7vw, 5rem);
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 40px;
     text-shadow: 2px 2px 6px rgba(42, 95, 127, 0.5);
-    letter-spacing: 8px;
-    font-style: italic;
+    letter-spacing: 10px;
+    text-transform: uppercase;
     line-height: 1.2;
 }
 
 .date {
+    font-family: 'Cormorant', serif;
     font-size: clamp(1.6rem, 4vw, 2.8rem);
     color: var(--text-dark);
     font-weight: 600;
@@ -242,6 +243,7 @@ body {
     border-radius: 50px;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(135, 206, 235, 0.4);
+    font-style: italic;
 }
 
 .scroll-indicator {
@@ -303,13 +305,14 @@ body {
 }
 
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     color: var(--secondary-color);
     margin-bottom: 40px;
     font-weight: 700;
     position: relative;
     display: inline-block;
+    font-style: italic;
 }
 
 .section-title::after {
@@ -322,12 +325,13 @@ body {
 }
 
 .message-text {
+    font-family: 'Cormorant', serif;
     font-size: clamp(1.3rem, 2.8vw, 1.9rem);
     color: var(--text-dark);
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.9;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* Event Details */
@@ -402,14 +406,16 @@ body {
 }
 
 .detail-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     color: var(--deep-sky);
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .venue-name {
+    font-family: 'Cormorant', serif;
     font-size: clamp(1.2rem, 2.2vw, 1.6rem);
     color: var(--text-dark);
     margin-bottom: 12px;
@@ -436,6 +442,7 @@ body {
 }
 
 .map-link {
+    font-family: 'Cormorant', serif;
     display: inline-block;
     color: var(--deep-sky);
     text-decoration: none;
@@ -479,6 +486,7 @@ body {
 }
 
 .number {
+    font-family: 'Cinzel', serif;
     font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 700;
     display: block;
@@ -486,9 +494,11 @@ body {
 }
 
 .label {
+    font-family: 'Cinzel', serif;
     font-size: clamp(1rem, 2.3vw, 1.5rem);
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    font-weight: 500;
 }
 
 .event-started {
@@ -505,13 +515,17 @@ body {
 }
 
 .dress-text {
+    font-family: 'Cinzel', serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--deep-sky);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .dress-note {
+    font-family: 'Cormorant', serif;
     font-size: clamp(1rem, 2vw, 1.3rem);
     color: var(--text-dark);
     font-style: italic;
@@ -526,6 +540,7 @@ body {
 }
 
 .rsvp-text {
+    font-family: 'Cormorant', serif;
     font-size: clamp(1rem, 2vw, 1.3rem);
     color: var(--text-dark);
     margin-bottom: 30px;
@@ -536,6 +551,7 @@ body {
 }
 
 .whatsapp-btn {
+    font-family: 'Cinzel', serif;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -545,7 +561,9 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     transition: all 0.4s ease;
     box-shadow: 0 6px 20px rgba(74, 144, 196, 0.5);
     position: relative;
@@ -596,9 +614,9 @@ footer {
 }
 
 .signature {
-    font-family: 'Tangerine', cursive;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
     color: var(--light-sky);
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
