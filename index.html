@@ -19,6 +19,21 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Music Player Button -->
+    <button id="musicToggle" class="music-toggle" title="Reproducir música">
+        <svg id="playIcon" class="music-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="pauseIcon" class="music-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Header con nombre de la quinceañera -->
     <header class="hero">
         <div id="particles-js"></div>

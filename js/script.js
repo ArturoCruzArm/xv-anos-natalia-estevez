@@ -108,6 +108,59 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// Music Player Functionality
+const audio = document.getElementById('backgroundMusic');
+const musicToggle = document.getElementById('musicToggle');
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+let musicStarted = false;
+let isPlaying = false;
+
+// Function to start music on first user interaction
+function startMusicOnFirstClick() {
+    if (!musicStarted) {
+        audio.play().then(() => {
+            musicStarted = true;
+            isPlaying = true;
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+        }).catch(error => {
+            console.log('Autoplay prevented:', error);
+        });
+
+        // Remove listeners after first play
+        document.removeEventListener('click', startMusicOnFirstClick);
+        document.removeEventListener('touchstart', startMusicOnFirstClick);
+        document.removeEventListener('scroll', startMusicOnFirstClick);
+    }
+}
+
+// Add listeners for first user interaction
+document.addEventListener('click', startMusicOnFirstClick);
+document.addEventListener('touchstart', startMusicOnFirstClick);
+document.addEventListener('scroll', startMusicOnFirstClick);
+
+// Toggle music play/pause with button
+musicToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    if (isPlaying) {
+        audio.pause();
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        isPlaying = false;
+    } else {
+        audio.play().then(() => {
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+            isPlaying = true;
+            musicStarted = true;
+        }).catch(error => {
+            console.log('Play prevented:', error);
+        });
+    }
+});
+
 // Smooth scroll for the scroll indicator
 document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
     window.scrollTo({

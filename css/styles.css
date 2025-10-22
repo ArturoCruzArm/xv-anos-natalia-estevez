@@ -37,6 +37,70 @@ body {
     z-index: 1;
 }
 
+/* Music Player Button */
+.music-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: musicPulse 2s ease-in-out infinite;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+}
+
+.music-toggle:active {
+    transform: scale(0.95);
+}
+
+.music-icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.music-icon.hidden {
+    display: none;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(212, 175, 55, 0.7);
+    }
+}
+
+/* Responsive music button */
+@media (max-width: 768px) {
+    .music-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .music-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
