@@ -172,33 +172,39 @@ body {
 }
 
 .main-title::before {
-    content: '✨';
+    content: '';
     position: absolute;
     left: -60px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.4em;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    border-radius: 50%;
     animation: sparkle 2s ease-in-out infinite;
 }
 
 .main-title::after {
-    content: '✨';
+    content: '';
     position: absolute;
     right: -60px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.4em;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    border-radius: 50%;
     animation: sparkle 2s ease-in-out infinite 1s;
 }
 
 @keyframes sparkle {
     0%, 100% {
-        opacity: 1;
+        opacity: 0.6;
         transform: translateY(-50%) scale(1);
     }
     50% {
-        opacity: 0.5;
-        transform: translateY(-50%) scale(1.2);
+        opacity: 1;
+        transform: translateY(-50%) scale(1.3);
     }
 }
 
@@ -257,22 +263,28 @@ body {
 }
 
 .invitation-message::before {
-    content: '🌸';
+    content: '';
     position: absolute;
     top: 40px;
     left: 10%;
-    font-size: 3rem;
-    opacity: 0.3;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.5;
     animation: float 4s ease-in-out infinite;
 }
 
 .invitation-message::after {
-    content: '🌸';
+    content: '';
     position: absolute;
     bottom: 40px;
     right: 10%;
-    font-size: 3rem;
-    opacity: 0.3;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.5;
     animation: float 5s ease-in-out infinite reverse;
 }
 
@@ -350,6 +362,20 @@ body {
     margin-bottom: 25px;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
     animation: iconFloat 3s ease-in-out infinite;
+}
+
+.icon-svg {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    color: var(--primary-color);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.icon-svg svg {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes iconFloat {
@@ -516,7 +542,9 @@ body {
 }
 
 .whatsapp-icon {
-    font-size: 1.5rem;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 /* Footer */
