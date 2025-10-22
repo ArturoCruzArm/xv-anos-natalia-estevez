@@ -34,10 +34,42 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4ba 100%);
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4ba 50%, #d4af37 100%);
     position: relative;
     text-align: center;
     padding: 40px 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 111, 71, 0.15) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(30px, 30px);
+    }
 }
 
 .hero-content {
@@ -56,25 +88,65 @@ body {
 
 .main-title {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: clamp(4rem, 12vw, 10rem);
     color: var(--secondary-color);
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+    position: relative;
+    display: inline-block;
+}
+
+.main-title::before {
+    content: '✨';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.4em;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.main-title::after {
+    content: '✨';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.4em;
+    animation: sparkle 2s ease-in-out infinite 1s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-50%) scale(1.2);
+    }
 }
 
 .subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    color: var(--primary-color);
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    color: #fff;
     font-weight: 400;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 3px;
 }
 
 .date {
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    color: var(--secondary-color);
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 3px;
+    background: rgba(139, 111, 71, 0.7);
+    padding: 15px 40px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .scroll-indicator {
@@ -102,25 +174,58 @@ body {
 
 /* Invitation Message */
 .invitation-message {
-    padding: 80px 20px;
-    background: white;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #faf8f5 100%);
     text-align: center;
+    position: relative;
+}
+
+.invitation-message::before {
+    content: '🌸';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    font-size: 3rem;
+    opacity: 0.3;
+    animation: float 4s ease-in-out infinite;
+}
+
+.invitation-message::after {
+    content: '🌸';
+    position: absolute;
+    bottom: 40px;
+    right: 10%;
+    font-size: 3rem;
+    opacity: 0.3;
+    animation: float 5s ease-in-out infinite reverse;
 }
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
     color: var(--secondary-color);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    margin: 15px auto 0;
 }
 
 .message-text {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    color: var(--text-light);
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    color: var(--text-dark);
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
+    line-height: 2;
+    font-weight: 300;
 }
 
 /* Event Details */
@@ -137,22 +242,47 @@ body {
 }
 
 .detail-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
+    padding: 50px 35px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
 .detail-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    border-color: var(--primary-color);
 }
 
 .icon {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: 5rem;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .detail-card h3 {
@@ -271,22 +401,42 @@ body {
 .whatsapp-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: #25D366;
+    gap: 12px;
+    background: linear-gradient(135deg, #25D366 0%, #1fb855 100%);
     color: white;
-    padding: 15px 40px;
+    padding: 18px 45px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.whatsapp-btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .whatsapp-btn:hover {
-    background: #1fb855;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #1fb855 0%, #128C7E 100%);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-icon {
