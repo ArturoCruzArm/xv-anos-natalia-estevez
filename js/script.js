@@ -190,3 +190,36 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(section);
 });
+
+// Letter-by-letter animation for main title
+function animateTextByLetter(element) {
+    const text = element.textContent;
+    element.textContent = '';
+    element.style.display = 'inline-block';
+
+    // Split text into letters and wrap each in a span
+    text.split('').forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.className = 'letter-animate';
+        span.style.animationDelay = `${index * 0.1}s`;
+        if (letter === ' ') {
+            span.style.marginRight = '0.3em';
+        }
+        element.appendChild(span);
+    });
+}
+
+// Apply animation to main title and subtitle
+document.addEventListener('DOMContentLoaded', () => {
+    const mainTitle = document.querySelector('.main-title');
+    const subtitle = document.querySelector('.subtitle');
+
+    if (mainTitle) {
+        animateTextByLetter(mainTitle);
+    }
+
+    if (subtitle) {
+        animateTextByLetter(subtitle);
+    }
+});

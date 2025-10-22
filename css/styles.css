@@ -623,3 +623,25 @@ footer {
 section {
     animation: fadeIn 0.8s ease-out;
 }
+
+/* Letter-by-letter animation */
+.letter-animate {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-30px) rotateX(90deg);
+    animation: letterFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes letterFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) rotateX(90deg) scale(0.5);
+    }
+    50% {
+        transform: translateY(10px) rotateX(-10deg) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale(1);
+    }
+}
