@@ -10,13 +10,13 @@ if (typeof particlesJS !== 'undefined') {
                 }
             },
             color: {
-                value: ['#d4af37', '#8b6f47', '#ffffff']
+                value: ['#c4a7e7', '#ffc8dd', '#b8d4f1', '#ffd5bf', '#c8e4d3']
             },
             shape: {
                 type: ['circle', 'triangle'],
                 stroke: {
                     width: 0,
-                    color: '#000000'
+                    color: '#ffffff'
                 }
             },
             opacity: {
@@ -89,7 +89,7 @@ function updateCountdown() {
     const distance = eventDate - now;
 
     if (distance < 0) {
-        document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem;">¡El evento ha comenzado!</p>';
+        document.getElementById('countdown').innerHTML = '<p class="event-started">¡El evento ha comenzado!</p>';
         return;
     }
 
