@@ -116,32 +116,52 @@ const pauseIcon = document.getElementById('pauseIcon');
 let musicStarted = false;
 let isPlaying = false;
 
-// Function to start music on first user interaction
-function startMusicOnFirstClick() {
-    if (!musicStarted) {
+// Preload audio on page load
+audio.load();
+
+// Function to start music
+function startMusic() {
+    if (!musicStarted || !isPlaying) {
+        // Reset audio to beginning if it hasn't been played yet
+        if (!musicStarted) {
+            audio.currentTime = 0;
+        }
+
         audio.play().then(() => {
             musicStarted = true;
             isPlaying = true;
             playIcon.classList.add('hidden');
             pauseIcon.classList.remove('hidden');
         }).catch(error => {
-            console.log('Autoplay prevented:', error);
+            console.log('Play prevented:', error);
+            // Keep play icon visible if failed
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
         });
-
-        // Remove listeners after first play
-        document.removeEventListener('click', startMusicOnFirstClick);
-        document.removeEventListener('touchstart', startMusicOnFirstClick);
-        document.removeEventListener('scroll', startMusicOnFirstClick);
     }
 }
 
-// Add listeners for first user interaction
-document.addEventListener('click', startMusicOnFirstClick);
-document.addEventListener('touchstart', startMusicOnFirstClick);
-document.addEventListener('scroll', startMusicOnFirstClick);
+// Function to handle first user interaction
+function handleFirstInteraction(e) {
+    // Don't auto-play on first click, just prepare the audio
+    // User needs to click the music button explicitly
+    if (!musicStarted) {
+        audio.load();
+        // Remove listeners after first interaction
+        document.removeEventListener('click', handleFirstInteraction);
+        document.removeEventListener('touchstart', handleFirstInteraction);
+        document.removeEventListener('touchend', handleFirstInteraction);
+    }
+}
+
+// Add listeners for first user interaction (Android compatibility)
+document.addEventListener('click', handleFirstInteraction, { passive: true });
+document.addEventListener('touchstart', handleFirstInteraction, { passive: true });
+document.addEventListener('touchend', handleFirstInteraction, { passive: true });
 
 // Toggle music play/pause with button
 musicToggle.addEventListener('click', (e) => {
+    e.preventDefault();
     e.stopPropagation();
 
     if (isPlaying) {
@@ -150,14 +170,22 @@ musicToggle.addEventListener('click', (e) => {
         pauseIcon.classList.add('hidden');
         isPlaying = false;
     } else {
-        audio.play().then(() => {
-            playIcon.classList.add('hidden');
-            pauseIcon.classList.remove('hidden');
-            isPlaying = true;
-            musicStarted = true;
-        }).catch(error => {
-            console.log('Play prevented:', error);
-        });
+        startMusic();
+    }
+});
+
+// Also handle touch events specifically for the button (Android)
+musicToggle.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (isPlaying) {
+        audio.pause();
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        isPlaying = false;
+    } else {
+        startMusic();
     }
 });
 
