@@ -401,6 +401,18 @@ body {
     font-weight: 500;
 }
 
+.venue-subtitle {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.map-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 .time {
     font-size: 1.5rem;
     color: var(--primary-color);
