@@ -10,7 +10,7 @@ if (typeof particlesJS !== 'undefined') {
                 }
             },
             color: {
-                value: ['#c4a7e7', '#ffc8dd', '#b8d4f1', '#ffd5bf', '#c8e4d3']
+                value: ['#87ceeb', '#b0d9f0', '#b0e0e6', '#d4e9f7', '#ffffff']
             },
             shape: {
                 type: ['circle', 'triangle'],
