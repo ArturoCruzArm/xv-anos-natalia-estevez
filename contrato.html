@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contrato - XV Años de Natalia Estévez Guardián</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline'; img-src 'self' data: https:;">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -208,6 +217,30 @@
             margin-bottom: 8px;
         }
 
+        .event-time {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .package-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .table-right {
+            text-align: right;
+        }
+
+        .contract-date {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -273,12 +306,12 @@
                 <div class="info-item">
                     <div class="info-label">Ceremonia Religiosa:</div>
                     <div class="info-value">Iglesia de San Nicolás de los Gonzales</div>
-                    <div class="info-value" style="font-size: 0.9rem; color: #666;">2:00 PM</div>
+                    <div class="info-value event-time">2:00 PM</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Recepción:</div>
                     <div class="info-value">Salón Long Beach</div>
-                    <div class="info-value" style="font-size: 0.9rem; color: #666;">4:00 PM</div>
+                    <div class="info-value event-time">4:00 PM</div>
                 </div>
             </div>
         </div>
@@ -287,7 +320,7 @@
             <h2 class="section-title">Paquete Contratado</h2>
             <div class="package-details">
                 <div class="package-title">SUPER PAQUETE DE FOTOGRAFÍA Y VIDEO - $8,500</div>
-                <p style="text-align: center; color: #666; margin-bottom: 20px;">
+                <p class="package-subtitle">
                     Cobertura: Sesión fotográfica previa + Misa + 7 horas de fiesta
                 </p>
 
@@ -318,33 +351,33 @@
                 <thead>
                     <tr>
                         <th>Concepto</th>
-                        <th style="text-align: right;">Monto</th>
+                        <th class="table-right">Monto</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Super Paquete de Fotografía y Video</td>
-                        <td style="text-align: right;">$8,500.00</td>
+                        <td class="table-right">$8,500.00</td>
                     </tr>
                     <tr>
                         <td>Tomas de Dron</td>
-                        <td style="text-align: right;">$500.00</td>
+                        <td class="table-right">$500.00</td>
                     </tr>
                     <tr>
                         <td>Mini Fotolibro</td>
-                        <td style="text-align: right;">$200.00</td>
+                        <td class="table-right">$200.00</td>
                     </tr>
                     <tr class="total-row">
                         <td>TOTAL</td>
-                        <td style="text-align: right;">$9,200.00</td>
+                        <td class="table-right">$9,200.00</td>
                     </tr>
                     <tr>
                         <td>Anticipo (30%)</td>
-                        <td style="text-align: right;">$3,000.00</td>
+                        <td class="table-right">$3,000.00</td>
                     </tr>
                     <tr>
                         <td>Saldo Restante</td>
-                        <td style="text-align: right;">$6,200.00</td>
+                        <td class="table-right">$6,200.00</td>
                     </tr>
                 </tbody>
             </table>
@@ -383,7 +416,7 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 0.9rem;">
+        <div class="contract-date">
             Fecha de firma: 19 de Octubre de 2025
         </div>
     </div>
