@@ -5,6 +5,8 @@ Selector de fotos interactivo para los XV años de Natalia Estévez Guardián (6
 ## 📸 Características
 
 - **112 fotos** optimizadas en formato WebP (~85-95% reducción de tamaño)
+- **2 videos** del evento embebidos desde YouTube
+- **Sistema de calificación** por estrellas (1-5) para cada foto
 - Selector interactivo con categorías:
   - 📸 **Impresión**: Máximo 100 fotos
   - 📱 **Redes Sociales**: Sin límite
@@ -74,15 +76,20 @@ python convert_to_webp.py
 - Contador en tiempo real de fotos por categoría
 - Alertas cuando excedes los límites recomendados
 
+### Calificación por Estrellas
+- Sistema de calificación de 1 a 5 estrellas para cada foto
+- Las calificaciones se guardan automáticamente
+- Se muestran en las tarjetas de fotos y en los reportes exportados
+
 ### Exportación
-- Enviar reporte completo por WhatsApp
+- Enviar reporte completo por WhatsApp con calificaciones
 - Compartir selecciones con otras personas
 - Limpiar todas las selecciones si es necesario
 
-### Sugerencias de Video
-- Sección especial para sugerencias de edición de video
-- Marca minutos y segundos específicos
-- Agrega descripción de cambios sugeridos
+### Videos del Evento
+- 2 videos embebidos de YouTube
+- Visualización directa en la página
+- Enlaces para ver en YouTube
 
 ## 🎯 Límites Recomendados
 
