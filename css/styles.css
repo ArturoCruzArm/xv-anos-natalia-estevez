@@ -585,9 +585,9 @@ body {
 
 .video-container {
     position: relative;
-    max-width: 506px; /* Ancho máximo para video vertical */
+    max-width: 900px;
     margin: 50px auto 0;
-    padding-bottom: 177.78%; /* Aspect ratio 9:16 (vertical) */
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 (horizontal) */
     height: 0;
     overflow: hidden;
     border-radius: 20px;
