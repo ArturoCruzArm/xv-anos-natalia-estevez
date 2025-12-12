@@ -2,15 +2,15 @@
 // SELECTOR DE FOTOS - XV AÑOS NATALIA ESTÉVEZ
 // ========================================
 
-const TOTAL_SESION_PHOTOS = 800;
+const TOTAL_SESION_PHOTOS = 912;
 const TOTAL_FIESTA_PHOTOS = 0;
-const TOTAL_PHOTOS = TOTAL_SESION_PHOTOS; // 800 fotos en total
+const TOTAL_PHOTOS = TOTAL_SESION_PHOTOS; // 912 fotos en total
 const STORAGE_KEY = 'natalia_xv_photo_selections';
 
 // Generate photo paths
 let photos = [];
 
-// Fotos de la sesión (foto_001.webp to foto_800.webp)
+// Fotos de la sesión (foto_001.webp to foto_912.webp)
 for (let i = 1; i <= TOTAL_SESION_PHOTOS; i++) {
     photos.push(`photos/foto_${String(i).padStart(3, '0')}.webp`);
 }
