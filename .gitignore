@@ -1,0 +1,14 @@
+# ZIP grandes (exceder limite GitHub de 100MB)
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/

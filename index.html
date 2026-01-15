@@ -12,7 +12,7 @@
 
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; media-src 'self' blob:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; media-src 'self' blob: https:; frame-src https://www.youtube.com https://youtube.com;">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -68,6 +68,22 @@
                 <br><br>
                 Tu presencia será el mejor regalo en este día tan importante para mí.
             </p>
+        </div>
+    </section>
+
+    <!-- Video del evento -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Video del Evento</h2>
+            <div class="video-container" data-aos="zoom-in" data-aos-delay="200">
+                <iframe
+                    src="https://www.youtube.com/embed/jm4LMl5iXE4?vq=hd1080&hd=1&rel=0&modestbranding=1"
+                    title="XV Años de Natalia Estévez Guardián"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
